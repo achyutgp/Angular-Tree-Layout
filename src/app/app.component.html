@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+<mat-card style="width: 25%">
+  <mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="start center" *ngFor="let nodeItem of nodeList" fxLayoutGap="8px" class="divItem" (click)="onClick(nodeItem)" [ngStyle]="{'display': nodeItem.hidden ? 'none' : 'flex', 'margin-left' : nodeItem.marginLeft, 'width': nodeItem.width}">
+      <i class="fa fa-folder" *ngIf="nodeItem.status === 0 && nodeItem.icon"></i>
+      <i class="fa fa-folder-open" *ngIf="nodeItem.status === 1 && nodeItem.icon"></i>
+      <i class="{{getIcon(nodeItem.ext)}} childNodes" *ngIf="!nodeItem.icon"></i>
+      <span>{{nodeItem.name}}</span>
+    </div>
+  </mat-card-content>
+</mat-card>

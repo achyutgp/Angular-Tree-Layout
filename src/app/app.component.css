@@ -1,0 +1,28 @@
+.divItem {
+  width:  100%;
+  margin: 4px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.divItem:hover {
+  background-color: #E0F2F1;
+}
+
+.fa {
+  color: #00695C;
+  font-size: 18px;
+}
+
+.childNodes {
+  color: #e91e63
+}
+
+span { 
+  font-weight: bold; 
+  line-height: 16px;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
